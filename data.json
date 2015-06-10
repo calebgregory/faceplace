@@ -1,0 +1,55 @@
+{
+  "profiles": {
+    "profilelogin:1": {
+      "email": "a@b.com",
+      "password": "123",
+      "firstName": "a",
+      "lastName": "b",
+      "fullName": "a b",
+      "photo": "http://i.imgur.com/bBeouSs.gif",
+      "hobbies": [
+        "eating",
+        "sleeping",
+        "coding"
+      ]
+    },
+    "profilelogin:2": {
+      "email": "b@c.com",
+      "password": "123",
+      "firstName": "b",
+      "lastName": "c",
+      "fullName": "b c",
+      "photo": "http://i.imgur.com/bBeouSs.gif",
+      "hobbies": [
+        "smoking",
+        "drinking",
+        "reading"
+      ]
+    },
+    "profilelogin:3": {
+      "email": "c@d.com",
+      "password": "123",
+      "firstName": "c",
+      "lastName": "d",
+      "fullName": "c d",
+      "photo": "https://cuteoverload.files.wordpress.com/2015/06/enhanced-3381-1433434259-3.jpg",
+      "hobbies": [
+        "buying stocks",
+        "selling stocks",
+        "trading stocks"
+      ]
+    }
+  },
+  "friendships": {
+    "profilelogin:1": [
+      "profilelogin:2",
+      "profilelogin:3"
+    ],
+    "profilelogin:2": [
+     "profilelogin:3"
+   ],
+   "profilelogin:3": [
+     "profilelogin:1"
+   ]
+  }
+}

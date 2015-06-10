@@ -1,0 +1,5 @@
+h1 Login
+form(name="login-form")
+  input(type="text" placeholder="email", ng-model="auth.email")
+  input(type="password" placeholder="password", ng-model="auth.password")
+  button(ng-click="auth.login()")
