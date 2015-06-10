@@ -1,0 +1,25 @@
+{
+  "name": "faceplace",
+  "version": "1.0.0",
+  "homepage": "https://github.com/calebgregory/faceplace",
+  "authors": [
+    "calebgregory <calebgregory@gmail.com>",
+    "jennifer jones <jybjones@gmail.com>",
+    "maxtrenkle <maxtrenkle@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "firebase": "~2.2.7",
+    "bootstrap": "~3.3.4"
+  }
+}
