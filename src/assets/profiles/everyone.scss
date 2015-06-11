@@ -3,4 +3,7 @@ img {
   max-width: 100px;
   padding: 7px;
   float: left;
+  .clearfix {
+    overflow: auto;
+  }
 }

@@ -13,7 +13,7 @@ angular
     vm.register = function() {
       debugger;
       Auth.register(vm.email, vm.password, function() {
-        $location.path('/everyone');
+        $location.path('/user_setup');
         $scope.$apply();
       });
     };
