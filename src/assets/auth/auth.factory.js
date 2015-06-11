@@ -5,7 +5,31 @@ angular
 
     return {
       login: function(email, password, cb) {
-
+        fb.authWithPassword({
+          email: email,
+          password: password
+        }, function(err, authData) {
+          if(err) {
+            console.log(err);
+          } else {
+            $rootScope.auth = authData;
+            console.log(authData)
+            cb();
+          }
+        });
+      },
+      register: function(email, password, cb) {
+        fb.createUser({
+          email: email,
+          password: password
+        }, function(err, authData) {
+          if(err) {
+            console.log(err)
+          } else {
+            $rootScope.auth = authData;
+            cb();
+          }
+        })
       }
     }
   });

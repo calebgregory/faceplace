@@ -1,0 +1,6 @@
+h1 Everyone
+.containter
+  .row
+    .person(ng-repeat="person in everyone.everyone | objToArr")
+      p {{person._id}}
+      img(src="{{person.photo}}")
