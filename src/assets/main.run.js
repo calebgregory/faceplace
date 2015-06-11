@@ -1,5 +1,5 @@
 angular
-  .module('fireplace')
+  .module('faceplace')
   .run(function($rootScope, $location, API_URL) {
     $rootScope
       .$on('$routeChangeStart', function(event, nextRoute) {

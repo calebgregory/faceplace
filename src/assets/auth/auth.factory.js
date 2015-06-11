@@ -4,6 +4,8 @@ angular
     var fb = new Firebase(API_URL);
 
     return {
+      login: function(email, password, cb) {
 
+      }
     }
   });

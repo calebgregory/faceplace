@@ -12,15 +12,20 @@ html(lang="en-US", ng-app="faceplace")
       nav
         ul
           li
-            a(href="login") login
+            a(href="/#/login") login
+          li
+            a(href="/#/") Home
 
     .app(ng-view)
 
     script(src="lib/build.js")
+
+    script(src="assets/main.module.js")
+    script(src="assets/main.run.js")
+    script(src="assets/main.constants.js")
+
+    script(src="assets/static/static.config.js")
+
     script(src="assets/auth/auth.config.js")
     script(src="assets/auth/auth.controller.js")
     script(src="assets/auth/auth.factory.js")
-    script(src="main.constants.js")
-    script(src="main.module.js")
-    script(src="main.run.js")
-    script(src="static/static.config.js")
