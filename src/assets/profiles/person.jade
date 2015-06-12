@@ -2,7 +2,7 @@
   .row
     h1 {{person.info.fullName}}
   .row
-    img(src="{{person.info.photo}}")
+    img.person(src="{{person.info.photo}}")
   .row
     h3 hobbies
     .hobbies(ng-repeat="hobby in person.info.hobbies")

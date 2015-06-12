@@ -8,9 +8,15 @@
 	justify-content: space-between;
 }
 
-img {
+
+img.everyone {
   min-width: 100px;
   max-width: 120px;
   min-height: 50px;
   padding: 5px;
+}
+
+img.person {
+  max-height: 200px;
+
 }
