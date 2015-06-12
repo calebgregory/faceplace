@@ -1,10 +1,32 @@
 @import 'profiles/everyone.scss';
+@import 'static/styles.scss';
 
 ul{
 	display: flex;
+  padding-top: 3%;
+  padding-left: 220px;
+
 }
 
 li {
 	list-style: none;
 	padding-right: 20px;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
+nav {
+  background-color: yellow;
+  width: 100%;
+  display: flex;
+}
+body {
+  background-color: #8753F9;
+}
+.container {
+  background-color: yellow;
+}
+form.login {
+  font-size: 18px;
+  padding-left: 250px;
 }

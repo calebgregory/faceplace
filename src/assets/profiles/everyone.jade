@@ -3,4 +3,4 @@ h1 Everyone
   .row
     .person(ng-repeat="person in everyone.everyone | objToArr")
       a.btn.btn-primary(href="/#/everyone/{{person._id}}")
-        img(ng-src="{{person.photo}}")
+        img.everyone(ng-src="{{person.photo}}")
