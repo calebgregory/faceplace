@@ -1,6 +1,7 @@
 angular
   .module('faceplace')
-  .factory('Person', function($http, API_URL) {
+  .factory('Person', function($http, API_URL, Auth) {
+    var userInfo = Auth.userInfo;
     return {
       getOne: function(id, cb) {
         $http
@@ -14,7 +15,7 @@ angular
       },
       register: function(data, cb) {
         $http
-          .post(`${API_URL}/profile.json`, data)
+          .put(`${API_URL}/profiles/${userInfo.uid}.json`, data)
           .success(cb);
       }
     };

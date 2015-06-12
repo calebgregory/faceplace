@@ -4,6 +4,12 @@ angular
     var fb = new Firebase(API_URL);
 
     return {
+      requireLogin: function() {
+        $rootScope.auth = fb.getAuth();
+        if(!$rootScope.auth) {
+          $location.path('/login');
+        }
+      },
       login: function(email, password, cb) {
         fb.authWithPassword({
           email: email,
@@ -26,10 +32,20 @@ angular
           if(err) {
             console.log(err)
           } else {
+            debugger;
             $rootScope.auth = authData;
             cb();
           }
         })
+      },
+      logout: function(cb) {
+        fb.unauth(function() {
+          $rootScope.auth = null;
+          cb();
+        })
+      },
+      userInfo: function() {
+        return fb.getAuth();
       }
     }
   });
