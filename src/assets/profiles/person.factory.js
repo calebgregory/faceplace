@@ -2,10 +2,10 @@ angular
   .module('faceplace')
   .factory('Person', function($http, API_URL) {
     return {
-      getOne: function(id, cb) {
+      getOne: (id, cb) {
         $http
           .get(`${API_URL}/profiles/${id}.json`)
-          .success(cb)
+          .success(cb);
       },
       getAll: function(cb) {
         $http
