@@ -2,7 +2,18 @@ angular
   .module('faceplace')
   .factory('Person', function($http, API_URL) {
     return {
-      getOne(id, cb) {
+      addFriend: function(id, friend, cb) {
+        $http
+          .put(`${API_URL}/friendships/${id}.json`, friend)
+          .success(cb);
+      },
+      getFriends: function(id, cb) {
+        $http
+          .get(`${API_URL}/friendships/${id}.json`)
+          .success(cb)
+          .error(function(data, error) { console.log(error); });
+      },
+      getOne: function(id, cb) {
         $http
           .get(`${API_URL}/profiles/${id}.json`)
           .success(cb);
@@ -12,9 +23,9 @@ angular
           .get(`${API_URL}/profiles.json`)
           .success(cb);
       },
-      register: function(data, cb) {
+      register: function(data, id, cb) {
         $http
-          .post(`${API_URL}/profile.json`, data)
+          .put(`${API_URL}/profiles/${id}.json`, data)
           .success(cb);
       }
     };

@@ -14,9 +14,15 @@ html(lang="en-US", ng-app="faceplace")
           li
             a(href="/#/login") login
           li
-            a(href="/#/") Home
+            a(href="/#/logout") logout
           li
-            a(href="/#/everyone") Faceplace
+            a(href="/#/") home
+          li
+            a(href="/#/everyone") faceplace
+          li
+            a(href="/#/friends") friends
+          li
+            a(href="/#/profile") profile
           li
             a(href="/#/404") 404
 
@@ -33,6 +39,7 @@ html(lang="en-US", ng-app="faceplace")
 
     script(src="assets/auth/auth.config.js")
     script(src="assets/auth/auth.controller.js")
+    script(src="assets/auth/logout.controller.js")
     script(src="assets/auth/auth.factory.js")
 
     script(src="assets/profiles/everyone.config.js")
@@ -41,3 +48,5 @@ html(lang="en-US", ng-app="faceplace")
     script(src="assets/profiles/person.factory.js")
     script(src="assets/profiles/user.config.js")
     script(src="assets/profiles/user_setup.controller.js")
+    script(src="assets/profiles/user_profile.controller.js")
+    script(src="assets/profiles/friends.controller.js")

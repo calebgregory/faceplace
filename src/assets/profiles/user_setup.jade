@@ -1,0 +1,17 @@
+h1 Set up your profile
+form
+  .form-group
+    label first name
+    input(type="text" placeholder="first name" ng-model="user.data.firstName")
+  .form-group
+    label last name
+    input(type="text" placeholder="last name" ng-model="user.data.lastName")
+  .form-group
+    label photo
+    input(type="url" placeholder="photo" ng-model="user.data.photo")
+  .form-group
+    label hobbies
+    input(type="text" placeholder="hobby" ng-model="user.data.hobbies[0]")
+    input(type="text" placeholder="hobby" ng-model="user.data.hobbies[1]")
+    input(type="text" placeholder="hobby" ng-model="user.data.hobbies[2]")
+  button.btn.btn-primary(ng-click="user.submitData()") submit

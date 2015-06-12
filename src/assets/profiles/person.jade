@@ -1,0 +1,11 @@
+.container
+  .row
+    h1 {{person.info.fullName}}
+  .row
+    img(src="{{person.info.photo}}")
+  .row
+    h3 hobbies
+    .hobbies(ng-repeat="hobby in person.info.hobbies")
+      p {{hobby}}
+  .row
+    button.btn.btn-primary(ng-click="person.addFriend()") Add friend
