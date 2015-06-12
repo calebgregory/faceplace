@@ -10,7 +10,7 @@ angular
 
     vm.addFriend = function() {
       var userId = $rootScope.auth.uid.replace(':', '%3A');
-      var friends = [].concat(vm.info.uid);
+      var friends = [].concat(vm.info._id);
       Person.getFriends(userId, function(data) {
         var friendData = data ? data : [];
         var newFriends = friends.concat(friendData);
