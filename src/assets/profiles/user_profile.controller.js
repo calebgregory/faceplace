@@ -1,7 +1,10 @@
 angular
   .module('faceplace')
-  .controller('UserProfileCtrl', function($routeParams) {
+  .controller('UserProfileCtrl', function($rootScope, Person) {
     var vm = this;
 
-    Person.getOne()
+    var id = $rootScope.auth.uid;
+    Person.getOne(id, function(data) {
+      vm.info = data;
+    })
   })

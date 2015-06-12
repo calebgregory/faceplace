@@ -4,6 +4,7 @@ angular
     $rootScope
       .$on('$routeChangeStart', function(event, nextRoute) {
         if(nextRoute.$$route && nextRoute.$$route.private) {
+          //$scope.$storage = $localStorage;
           Auth.requireLogin();
         }
       });

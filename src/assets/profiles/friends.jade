@@ -1,4 +1,5 @@
 h1 Here's where friends would go . . . if I had any.
 .container
   .friends(ng-repeat="friend in friends.list")
-    img(ng-src="{{friend.photo}}")
+    a(href="/#/everyone/{{friend._id}}")
+      img(ng-src="{{friend.photo}}")

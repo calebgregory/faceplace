@@ -1,1 +1,4 @@
-h1 {{profile.fullName}}
+h1 {{profile.info.fullName}}
+img(ng-src="{{profile.info.photo}}")
+.hobbies(ng-repeat="hobby in profile.info.hobbies")
+  p {{hobby}}

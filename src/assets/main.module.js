@@ -1,2 +1,2 @@
 angular
-  .module('faceplace', ['ngRoute']);
+  .module('faceplace', ['ngRoute', 'ngStorage']);

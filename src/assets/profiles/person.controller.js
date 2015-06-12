@@ -12,9 +12,10 @@ angular
       var userId = $rootScope.auth.uid.replace(':', '%3A');
       var friends = [].concat(vm.info.uid);
       Person.getFriends(userId, function(data) {
-        var newFriends = friends.concat(data);
+        var friendData = data ? data : [];
+        var newFriends = friends.concat(friendData);
         Person.addFriend(userId, newFriends, function() {
-          $location.path('/friends')
+          $location.path('/friends');
         });
       });
     };
