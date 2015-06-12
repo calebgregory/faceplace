@@ -1,6 +1,6 @@
 angular
   .module('faceplace')
-  .controller('PersonCtrl', function($routeParams, Person) {
+  .controller('PersonCtrl', function($routeParams, $location, $rootScope, Person) {
     var vm = this;
     vm.id = $routeParams.id;
 
@@ -9,7 +9,13 @@ angular
     });
 
     vm.addFriend = function() {
-      // Person.addFriend();
-      console.log("add friend")
-    }
+      var userId = $rootScope.auth.uid.replace(':', '%3A');
+      var friends = [].concat(vm.info.uid);
+      Person.getFriends(userId, function(data) {
+        var newFriends = friends.concat(data);
+        Person.addFriend(userId, newFriends, function() {
+          $location.path('/friends')
+        });
+      });
+    };
   });

@@ -19,7 +19,6 @@ angular
             console.log(err);
           } else {
             $rootScope.auth = authData;
-            console.log(authData)
             cb();
           }
         });
@@ -32,7 +31,6 @@ angular
           if(err) {
             console.log(err)
           } else {
-            debugger;
             $rootScope.auth = authData;
             cb();
           }
@@ -44,7 +42,7 @@ angular
           cb();
         })
       },
-      userInfo: function() {
+      getAuth: function() {
         return fb.getAuth();
       }
     }
