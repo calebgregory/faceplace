@@ -3,7 +3,7 @@ angular
   .controller('FriendsCtrl', function($rootScope, Person) {
     var vm = this;
 
-    vm.list = {}
+    vm.list = {};
     var id = $rootScope.auth.uid;
     Person.getFriends(id, function(friendIds) {
       if (friendIds) {
